@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+<div class="row">
+    <div>
+        <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">{{planObj?.plan}}</h5>
+                <h6 class="card-price text-center">{{planObj?.price}}<span class="period">/month</span></h6>
+                <hr>
+                <ul class="fa-ul">
+                    <li *ngFor="let item of planObj?.features">
+                        <div
+                            [ngClass]="{'text-muted': !item.isEnable, 'bi bi-check': item.isEnable, 'fw-bold': item.isTrue}">
+                            <div class="fa fa-solid fa-check"></div>{{item.name}}
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
